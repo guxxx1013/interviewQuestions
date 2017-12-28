@@ -1,0 +1,13 @@
+简历问题：
+1.
+
+Java知识：
+Q:String abc = "ab"; abc ab 分别存在哪里? int Integer 分别存在哪里？
+A:
+补充：Java中的数据类型有两种。基本类型(primitive types), 共有8种，即int, short, long, byte, float, double, boolean, char。存在于栈中。
+另一种是包装类数据，如Integer, String, Double等将相应的基本数据类型包装起来的类。这些类数据全部存在于堆中.
+
+数据库知识：
+
+
+计算机网络知识：
