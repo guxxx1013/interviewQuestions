@@ -3,10 +3,18 @@
 
 Java知识：
 Q:String abc = "ab"; abc ab 分别存在哪里? int Integer 分别存在哪里？
-A:
-(在栈中查找有没有存放值为"abc"的地址)
+A:在栈中查找有没有存放值为"ab"的地址,ab应该是放在堆中，abc在栈中作为名片来储存
 补充：Java中的数据类型有两种。基本类型(primitive types), 共有8种，即int, short, long, byte, float, double, boolean, char。存在于栈中。
 另一种是包装类数据，如Integer, String, Double等将相应的基本数据类型包装起来的类。这些类数据全部存在于堆中.
+
+Q:Iterator 删数据 添加数据时是否会掉控制?
+正确的删除多个元素的方法是使用迭代，并且你知道java中的foreach循环看起来像一个迭代器，但实际上并不是。
+所以在ArrayList删除多个元素不要用遍历的方式，会产生漏删。foreach 会报错产生ConcurrentModificationException异常。
+
+https://www.cnblogs.com/goody9807/p/6432904.html
+
+Q:GC 中的 New Generation 和 Old Generation?
+在New Generation中，有一个叫Eden的空间，主要是用来存放新生的对象，还有两个Survivor Spaces（from,to）, 它们用来存放每次垃圾回收后存活下来的对象。在Old Generation中，主要存放应用程序中生命周期长的内存对象，还有个Permanent Generation，主要用来放JVM自己的反射对象，比如类对象和方法对象等。
 
 数据库知识：
 
